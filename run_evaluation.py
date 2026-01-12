@@ -5,7 +5,13 @@
 from dataset_loader import load_scam_dataset
 from evaluation import evaluate_predictions
 
-DATASET_PATH='/Users/abhinavkumar/Desktop/generative-ai/scamguard/dataset.csv'
+# DATASET_PATH='/home/elsner/Documents/ScamGuard/dataset.csv'
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+DATASET_PATH = os.path.join(BASE_DIR, "dataset.csv")
+
 # <IMPORTANT> CHANGE THIS TO YOUR dataset.csv PATH
 
 def run():

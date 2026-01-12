@@ -6,8 +6,14 @@ from dataset_loader import build_few_shot_examples
 from prompt import scam_detection_prompt
 from schema import ScamDetectionResult
 from config import GOOGLE_API_KEY
+import os
 
-DATASET_PATH = "/Users/abhinavkumar/Desktop/generative-ai/scamguard/dataset.csv"
+# DATASET_PATH = "/home/elsner/Documents/ScamGuard/dataset.csv"
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# ✅ Build dataset path relative to repo
+DATASET_PATH = os.path.join(BASE_DIR, "dataset.csv")
 
 def build_scam_classifier_chain():
     # Load dataset once
